@@ -3,13 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { ApiResponse } from '../models/interfaces';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ExchangeRateService {
-  private apiKey = '46bfbe3033218767a398e55cb2ed14b2';
   private apiUrl = `https://data.fixer.io/api/latest?access_key=${environment.apiKey}&symbols=USD,UAH,EUR`;
 
   constructor(private http: HttpClient) {}
