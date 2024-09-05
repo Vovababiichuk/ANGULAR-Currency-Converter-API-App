@@ -42,19 +42,21 @@ export class CurrencyConverterComponent implements OnInit {
     const rate2 = this.rates[this.currency2];
 
     if (rate1 && rate2) {
-      this.amount2 = (this.amount1 * rate1) / rate2;
+      this.amount2 = +((this.amount1 * rate1) / rate2).toFixed(4);
     }
   }
 
   handleAmountChange(value: number, isAmount1: boolean): void {
+    const formattedValue = parseFloat(value.toFixed(4));
+
     if (isAmount1) {
-      this.amount1 = value;
+      this.amount1 = formattedValue;
       this.updateConversion();
     } else {
-      this.amount2 = value;
+      this.amount2 = formattedValue;
       const rate1 = this.rates[this.currency1];
       const rate2 = this.rates[this.currency2];
-      this.amount1 = (this.amount2 * rate2) / rate1;
+      this.amount1 = +((this.amount2 * rate2) / rate1).toFixed(4);
     }
   }
 
