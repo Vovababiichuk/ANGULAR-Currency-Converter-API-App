@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ExchangeRateService } from '../../services/exchange-rate.service';
-import { ExchangeRates } from '../../models/interfaces';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ExchangeRates } from '../../models/interfaces';
+import { ExchangeRateService } from '../../services/exchange-rate.service';
 
 @Component({
   selector: 'app-currency-converter',
