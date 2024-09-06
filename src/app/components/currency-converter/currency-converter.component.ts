@@ -68,4 +68,8 @@ export class CurrencyConverterComponent implements OnInit {
     }
     this.updateConversion();
   }
+
+  getCurrencyIcon(currency: string): string {
+    return `assets/icons/${currency}.svg`;
+  }
 }
