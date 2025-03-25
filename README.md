@@ -10,4 +10,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Author
 
-- Volodymyr Babiichuk - https://volodymyrcodepro.site/
+- Volodymyr Babiichuk - https://volodymyrcodepro.online/
